@@ -1,0 +1,82 @@
+<div class="block">
+  <div class="elem">
+    <img src="{{items[0].url}}" alt="" (click)="onSelect(items[0])" [class.selected]="items[0] === selected">
+    <h3> {{items[0].name}}</h3>
+    <div *ngIf="name =='Утро в сосновом бору'">
+      <div class="block-det">
+        <h4>Информация о картине</h4>
+        <p>Автор <span class="span">{{selected.autor}}</span></p>
+        <p>Год написания <span class="span">{{selected.year}}</span></p>
+        <p>Размер холста <span class="span">{{selected.size}}</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="elem">
+    <img src="{{items[3].url}}" alt="" (click)="onSelect(items[3])" [class.selected]="items[3] === selected">
+    <h3> {{items[3].name}}</h3>
+    <div *ngIf="name =='Лошади у крыльца'">
+      <div class="block-det">
+        <h4>Информация о картине</h4>
+        <p>Автор <span class="span">{{selected.autor}}</span></p>
+        <p>Год написания <span class="span">{{selected.year}}</span></p>
+        <p>Размер холста <span class="span">{{selected.size}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+  <div [ngSwitch]="id">
+    <div *ngSwitchCase="1" class="block-with-pic">
+      <div class="elem-block-with-pic">
+        <img src="{{items[1].url}}" alt="" (click)="onSelectMini(items[1])" [class.selectedMini]="items[1] === selectedMini">
+        <h3> {{items[1].name}}</h3>
+        <div *ngIf="nameMini =='Сосновый бор. Мачтовый лес в Вятской губернии'">
+          <div class="block-det">
+            <h4>Информация о картине</h4>
+            <p>Автор <span class="span">{{selectedMini.autor}}</span></p>
+            <p>Год написания <span class="span">{{selectedMini.year}}</span></p>
+            <p>Размер холста <span class="span">{{selectedMini.size}}</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="elem-block-with-pic">
+        <img src="{{items[2].url}}" alt="" (click)="onSelectMini(items[2])" [class.selectedMini]="items[2] === selectedMini">
+        <h3> {{items[2].name}}</h3>
+        <div *ngIf="nameMini =='Рожь'">
+          <div class="block-det">
+            <h4>Информация о картине</h4>
+            <p>Автор <span class="span">{{selectedMini.autor}}</span></p>
+            <p>Год написания <span class="span">{{selectedMini.year}}</span></p>
+            <p>Размер холста <span class="span">{{selectedMini.size}}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="4" class="block-with-pic">
+      <div class="elem-block-with-pic">
+        <img src="{{items[4].url}}" alt="" (click)="onSelectMini(items[4])" [class.selectedMini]="items[4] === selectedMini">
+        <h3> {{items[4].name}}</h3>
+        <div *ngIf="nameMini =='Английская маре с ее негритянками'">
+          <div class="block-det">
+            <h4>Информация о картине</h4>
+            <p>Автор <span class="span">{{selectedMini.autor}}</span></p>
+            <p>Год написания <span class="span">{{selectedMini.year}}</span></p>
+            <p>Размер холста <span class="span">{{selectedMini.size}}</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="elem-block-with-pic">
+        <img src="{{items[5].url}}" alt="" (click)="onSelectMini(items[5])" [class.selectedMini]="items[5] === selectedMini">
+        <h3> {{items[5].name}}</h3>
+        <div *ngIf="nameMini =='Портрет человека с двумя лошадьми'">
+          <div class="block-det">
+            <h4>Информация о картине</h4>
+            <p>Автор <span class="span">{{selectedMini.autor}}</span></p>
+            <p>Год написания <span class="span">{{selectedMini.year}}</span></p>
+            <p>Размер холста <span class="span">{{selectedMini.size}}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
